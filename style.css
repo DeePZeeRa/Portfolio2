@@ -50,7 +50,6 @@ header {
   justify-content: space-around;
   height: 70px;
   background-color: rgba(255, 255, 255, 0.123);
-  backdrop-filter: blur(10px);
   padding: 0 30px;
   box-shadow: 0 0 15px #72a1de8d;
   z-index: 999;
@@ -69,7 +68,7 @@ header {
 .tubelight {
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
   outline: none;
-  animation: animate 4s linear infinite;
+  animation: animate 3s linear infinite 0.5s ease-out;
   font-weight: 550;
 }
 
@@ -109,7 +108,7 @@ header ul {
   padding: 15px 15px;
   border-radius: 50px;
   background-color: rgba(0, 0, 69, 0.3);
-  backdrop-filter: blur(50%);
+  /* backdrop-filter: blur(50%); */
   box-shadow: 0 0 67px #fdfdff;
 }
 
@@ -307,7 +306,7 @@ header ul a {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: animate-gradient 2.5s linear infinite;
+  animation: animate-gradient 2.5s linear infinite 0.5s ease-out;
 }
 
 .name {
@@ -344,7 +343,7 @@ header ul a {
 
 .hero-vid-box img {
   width: 300px;
-  height: 400px;
+  height: 500px;
   mix-blend-mode: lighten;
   opacity: 100%;
   box-shadow: 0 0 50px #8be4ff;
@@ -375,7 +374,7 @@ header ul a {
   transform: translate(-50%, -100%) rotate(45deg);
   border-top: transparent;
   border-left: transparent;
-  animation: scroll-down 2s ease-in-out infinite;
+  animation: scroll-down 3s ease-in-out infinite;
 }
 
 .scroll-down::before {
@@ -858,12 +857,19 @@ header ul a {
   width: 95px;
 }
 
-.contact-box button:hover {
+/* .contact-box button:hover {
   box-shadow: 0 0 25px #f9e10a;
   background-color: yellow;
   color: black;
-  font-size: 16px;
+  font-size: 16px; */
+/* } */
+.contact-box button:disabled {
+  background-color: rgb(246, 255, 0);
+  color: white;
+  cursor: not-allowed;
+  box-shadow: 0 0 25px #f9e10a;
 }
+
 
 footer {
   display: flex;
@@ -875,9 +881,10 @@ footer {
   justify-content: center;
   height: 70px;
   background-color: rgba(255, 255, 255, 0.128);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.356);
   z-index: 999;
+  opacity: 0.9;
 }
 
 footer h1 {
@@ -889,39 +896,39 @@ html {
 }
 
 .autoBlur {
-  animation: autoBlurAnimation linear both;
+  animation: autoBlurAnimation linear both 0.5s ease-out;
   animation-timeline: view();
 }
 @keyframes autoBlurAnimation {
   0% {
-    filter: blur(40px);
+    /* filter: blur(40px); */
     opacity: 0;
   }
   35%,
   65% {
-    filter: blur(0);
+    /* filter: blur(0); */
     opacity: 1;
   }
   100% {
-    filter: blur(40px);
+    /* filter: blur(40px); */
     opacity: 0;
   }
 }
 
 .autoDisplay {
-  animation: autoDisplayAnimation both;
+  animation: autoDisplayAnimation both 0.5s ease-out;
   animation-timeline: view();
 }
 
 @keyframes autoDisplayAnimation {
   from {
-    filter: blur(10px);
+    /* filter: blur(10px); */
     transform: translateY(-200px) scale(0);
-    opacity: 0.2;
+    /* opacity: 0.2; */
   }
   50% {
     opacity: 1;
-    filter: blur(0);
+    /* filter: blur(0); */
     transform: translateX(0);
   }
 }
@@ -929,43 +936,39 @@ html {
 /*faded*/
 
 .fadeInRight {
-  animation: fadeInAnimation both;
+  animation: fadeInAnimationR both 0.5s ease-out;
   animation-timeline: view();
 }
 
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-    transform: translateX(-500px) scale(0.2);
+@keyframes fadeInAnimationR {
+  from {
+    /* filter: blur(10px); */
+    transform: translateX(-1000px) scale(0);
+    /* opacity: 0.2; */
   }
-  35%,
-  65% {
-    opacity: 1;
-    transform: translateX(0px) scale(1);
-    filter: blur(0);
-  }
-  100% {
-    filter: blur(20px);
+  50% {
+    /* opacity: 1; */
+    /* filter: blur(0); */
+    transform: translateX(0);
   }
 }
+
+
 .fadeInLeft {
-  animation: fadeInAnimationLeft both;
+  animation: fadeInAnimationLeft both 0.5s ease-out;
   animation-timeline: view();
 }
 
 @keyframes fadeInAnimationLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(500px) scale(0.2);
+  from {
+    /* filter: blur(10px); */
+    transform: translateX(1000px) scale(0);
+    /* opacity: 0.2; */
   }
-  35%,
-  65% {
-    opacity: 1;
-    transform: translateX(0px) scale(1);
-    filter: blur(0);
-  }
-  100% {
-    filter: blur(20px);
+  50% {
+    /* opacity: 1; */
+    /* filter: blur(0); */
+    transform: translateX(0);
   }
 }
 
@@ -1156,7 +1159,7 @@ html {
   bottom: 70%;
   width: 0%;
   background-color: #08052a;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   z-index: 999;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.356);
   border-bottom-left-radius: 100%;
@@ -1201,7 +1204,7 @@ html {
 /*open sidebar*/
 
 .sidebar.open-sidebar {
-  animation: opensidebar 1.5s forwards;
+  animation: opensidebar 1.5s forwards 0.5s ease-out;
 }
 
 @keyframes opensidebar {
@@ -1214,7 +1217,7 @@ html {
 }
 
 .sidebar.close-sidebar {
-  animation: closesidebar 1.5s forwards;
+  animation: closesidebar 1.5s forwards 0.5s ease-out;
 }
 
 @keyframes closesidebar {

@@ -9,10 +9,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <style>
+                html {
+                        scroll-behavior: smooth;
+                }
+        </style>
 </head>
 <body>
         <div class ="container">
-                <video class="back-vid" loop autoplay muted plays-inline src ="galaxy.mp4" type = "video/mp4"></video>
+                <video class="back-vid" loop autoplay muted plays-inline src ="/Portfolio2/galaxy.mp4" type = "video/mp4"></video>
 
         
 
@@ -58,7 +63,7 @@
                 </div>
         </div>
         <div class="blackhole-box">
-                <video src="blackhole.mp4" type="video/mp4" loop autoplay muted plays-inline></video>
+                <!-- <video src="blackhole.mp4" type="video/mp4" loop autoplay muted plays-inline></video> -->
         </div>
         <section class="hero" id="heroo">
                 <div class="hero-info autoBlur">
@@ -234,16 +239,17 @@
                 
 
                 <div class="contact-box autoBlur">
-                        <p style="font-size: 25px;">I'm here to help with your projects and works.</p>
-                        <form  name="submit-to-google-sheet">
+                <p style="font-size: 25px;">I'm here to help with your projects and works.</p>
+                <form  name="submit-to-google-sheet">
                         <p>Full Name</p>
                         <input type="text" placeholder="Your Full Name" name="Name" required>
                         <p>Email Address</p>
                         <input type="text" placeholder="Your Email" name="Email" required>
                         <p>Phone Number</p>
-                        <input type="text" placeholder="Enter Phone No." name="phone">
+                        <input type="number" placeholder="Enter Phone No." name="phone">
                         <p>Your Message</p>
                         <input type="text" placeholder="comment" name="Message">
+
 
                         <button><i class='bx bxs-send' > Send </i></button>
                         </form>
@@ -264,7 +270,7 @@
         </footer>
       
 </div>
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
         
 </body>
 </html>
